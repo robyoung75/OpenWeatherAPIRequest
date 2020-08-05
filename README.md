@@ -1,12 +1,10 @@
 # OpenWeatherAPIRequest
 
-OpenWeather API Request Template.
-=================================
 
 main.js async Get Request
 -------------------------
 
-let generateForecast = async () => {
+`let generateForecast = async () => {
     try {
         const response = await fetch(""+weatherUrl+"?q="+inputValue.value+"&appid="+apiKey+"&units=imperial");
         if(response.ok) {
@@ -17,19 +15,19 @@ let generateForecast = async () => {
     catch(error) {
         console.log(error);
     }
-}
+}`
 
 helper.js
 ---------
-// renders raw JSON object
+renders raw JSON object
 
-let renderRawResponse = (data) => {
+`let renderRawResponse = (data) => {
     responseField.innerHTML = JSON.stringify(data);
-};
+};`
 
-// renders JSON properties to the page
+renders JSON properties to the page
 
-let renderResponse = (data) => {
+`let renderResponse = (data) => {
     let nameValue = data['name'];
     let tempValue = data['main']['temp'];
     let descValue = data['weather'][0]['description'];    
@@ -69,7 +67,8 @@ let renderResponse = (data) => {
     windDir.innerHTML = `Wind Direction: ${windDirValue} degrees ${windDirection(windDirValue)}`;
     iconImg.src = iconUrl;
     
-}
+}`
 
 
-button.addEventListener('click', generateForecast);
+`button.addEventListener('click', generateForecast);`
+
