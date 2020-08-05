@@ -1,7 +1,7 @@
 # OpenWeatherAPIRequest
 A simple Template to create an OpenWeather API Request
 
-# main.js async Get Request
+### main.js async Get Request
 -------------------------
 
 `let generateForecast = async () => {
@@ -17,15 +17,17 @@ A simple Template to create an OpenWeather API Request
     }
 }`
 
-# helper.js
----------
+### helper.js
+-----------
 **Renders raw JSON object:**
+--------------------------
 
 `let renderRawResponse = (data) => {
     responseField.innerHTML = JSON.stringify(data);
 };`
 
 **Renders JSON properties to the page:**
+-----------------------------------------
 
 `let renderResponse = (data) => {
     let nameValue = data['name'];
@@ -68,7 +70,7 @@ A simple Template to create an OpenWeather API Request
     iconImg.src = iconUrl;    
 }`
 
-**Event Listener onclick:**
+## Event Listener onclick:
 
 `button.addEventListener('click', generateForecast);`
 
