@@ -19,14 +19,14 @@ A simple Template to create an OpenWeather API Request
 
 ### helper.js
 -----------
-**Renders raw JSON object:**
+###### Renders raw JSON object:
 --------------------------
 
 `let renderRawResponse = (data) => {
     responseField.innerHTML = JSON.stringify(data);
 };`
 
-**Renders JSON properties to the page:**
+###### Renders JSON properties to the page:
 -----------------------------------------
 
 `let renderResponse = (data) => {
@@ -70,7 +70,8 @@ A simple Template to create an OpenWeather API Request
     iconImg.src = iconUrl;    
 }`
 
-## Event Listener onclick:
+### Event Listener onclick:
+-------------------------------
 
 `button.addEventListener('click', generateForecast);`
 
