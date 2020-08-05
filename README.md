@@ -1,7 +1,7 @@
 # OpenWeatherAPIRequest
+A simple Template to create an OpenWeather API Request
 
-
-main.js async Get Request
+# main.js async Get Request
 -------------------------
 
 `let generateForecast = async () => {
@@ -17,15 +17,15 @@ main.js async Get Request
     }
 }`
 
-helper.js
+# helper.js
 ---------
-renders raw JSON object
+**Renders raw JSON object**
 
 `let renderRawResponse = (data) => {
     responseField.innerHTML = JSON.stringify(data);
 };`
 
-renders JSON properties to the page
+**renders JSON properties to the page**
 
 `let renderResponse = (data) => {
     let nameValue = data['name'];
@@ -65,10 +65,9 @@ renders JSON properties to the page
     desc.innerHTML = descValue;
     wind.innerHTML = `Wind: ${Math.floor(windValue)} mph`;
     windDir.innerHTML = `Wind Direction: ${windDirValue} degrees ${windDirection(windDirValue)}`;
-    iconImg.src = iconUrl;
-    
+    iconImg.src = iconUrl;    
 }`
 
-
+**Event Listener onclick**
 `button.addEventListener('click', generateForecast);`
 
