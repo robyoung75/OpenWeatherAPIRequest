@@ -19,13 +19,13 @@ A simple Template to create an OpenWeather API Request
 
 # helper.js
 ---------
-**Renders raw JSON object**
+**Renders raw JSON object:**
 
 `let renderRawResponse = (data) => {
     responseField.innerHTML = JSON.stringify(data);
 };`
 
-**renders JSON properties to the page**
+**Renders JSON properties to the page:**
 
 `let renderResponse = (data) => {
     let nameValue = data['name'];
@@ -34,9 +34,9 @@ A simple Template to create an OpenWeather API Request
     let iconValue = data['weather'][0]['icon'];
     let windValue = data['wind']['speed'];
     let windDirValue = data['wind']['deg'];
-    let iconUrl =  "http://openweathermap.org/img/w/" +iconValue+ ".png";
+    let iconUrl =  "http://openweathermap.org/img/w/" +iconValue+ ".png";`
 
-    const windDirection = (wind) => {
+    `const windDirection = (wind) => {
         if (wind > 340 && wind < 20) {
             return 'North';
         }
@@ -68,6 +68,7 @@ A simple Template to create an OpenWeather API Request
     iconImg.src = iconUrl;    
 }`
 
-**Event Listener onclick**
+**Event Listener onclick:**
+
 `button.addEventListener('click', generateForecast);`
 
