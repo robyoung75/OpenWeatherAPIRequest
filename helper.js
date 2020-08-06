@@ -13,6 +13,7 @@ let renderResponse = (data) => {
     let iconValue = data['weather'][0]['icon'];
     let windValue = data['wind']['speed'];
     let windDirValue = data['wind']['deg'];
+    let windGustValue = data['wind']['gust'];
     let iconUrl =  "http://openweathermap.org/img/w/" +iconValue+ ".png";
 
     const windDirection = (wind) => {
@@ -42,8 +43,8 @@ let renderResponse = (data) => {
     name.innerHTML = nameValue;
     temp.innerHTML = `Temp: ${Math.floor(tempValue)} Degrees F`;
     desc.innerHTML = descValue;
-    wind.innerHTML = `Wind: ${Math.floor(windValue)} mph`;
-    windDir.innerHTML = `Wind Direction: ${windDirValue} degrees ${windDirection(windDirValue)}`;
+    wind.innerHTML = `Wind: ${Math.floor(windValue)} mph ${windDirection(windDirValue)}`;
+    windGust.innerHTML = `Wind gusts: ${Math.floor(windGustValue)} mph`;
     iconImg.src = iconUrl;
     
 }
